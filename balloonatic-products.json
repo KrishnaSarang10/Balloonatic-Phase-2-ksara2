@@ -1,0 +1,69 @@
+{
+    "products": [
+        {
+            "productName": "Ballon Umbrella",
+            "productId": "ID_12345678",
+            "imageURL": "images/1.jpeg",
+            "category": "birthday_bouquets",
+            "color": "White",
+            "manufacture": "US Gasbags",
+            "material": "Maylr",
+            "size": "XX-large",
+            "unitPrice": 29.10,
+            "quantityInStock": 200,
+            "discription": "The artists who use the round balloons to build are called 'stackers' and the artists who use pencil balloons to build are called 'twisters.'"
+        },
+        {
+            "productName": "Mystery Bouquet",
+            "productId": "ID_12345679",
+            "imageURL": "images/2.jpg",
+            "category": "ballony_occasions",
+            "color": "Red",
+            "manufacture": "US Gasbags",
+            "material": "Maylr",
+            "size": "Small",
+            "unitPrice": 42.10,
+            "quantityInStock": 300,
+            "discription": "Most commonly associated with helium balloon decor, more recently balloon decorators have been moving towards the creation of air-filled balloon decorations due to the non-renewable natural resource of helium limited in supply."
+        },
+        {
+            "productName": "Birthday Girl",
+            "productId": "ID_12345670",
+            "imageURL": "images/3.jpg",
+            "category": "build_ballon_bouquet",
+            "color": "Pink",
+            "manufacture": "US Gasbags",
+            "material": "Vinyl",
+            "size": "Medium",
+            "unitPrice": 50.00,
+            "quantityInStock": 500,
+            "discription": "Party balloons are mostly made of a natural latex tapped from rubber trees, and can be filled with air, helium, water, or any other suitable liquid or gas. The rubber's elasticity makes the volume adjustable."
+        },
+        {
+            "productName": "Ballon Kite",
+            "productId": "ID_12345671",
+            "imageURL": "images/4.jpg",
+            "category": "decorating_with_ballons",
+            "color": "Black",
+            "manufacture": "US Gasbags",
+            "material": "Latex",
+            "size": "Large",
+            "unitPrice": 15.00,
+            "quantityInStock": 200,
+            "discription": "The most common types of balloon decor include arches, columns, centerpieces, balloon drops, sculptures, and balloon bouquets"
+        },
+        {
+            "productName": "Ballon Tree",
+            "productId": "ID_12345672",
+            "imageURL": "images/5.jpg",
+            "category": "ballon_in_bulk",
+            "color": "Yellow",
+            "manufacture": "US Gasbags",
+            "material": "Vinyl",
+            "size": "XX-large",
+            "unitPrice": 35.10,
+            "quantityInStock": 230,
+            "discription": "With the increased aptitude for balloon twisting as well as balloon stacking, the rise of the deco-twister manifests itself as the combination of stacking techniques as well as twisting techniques to create unique and interesting balloon decor options."
+        }
+    ]
+}

@@ -1,0 +1,179 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>BALLOONTIC SHOP</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<script
+			type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script src="js/jquery.min.js"></script>
+	   
+		<link rel="stylesheet" href="css/fwslider.css" media="all">
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/fwslider.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(".dropdown img.flag").addClass("flagvisibility");
+	
+				$(".dropdown dt a").click(function () {
+					$(".dropdown dd ul").toggle();
+				});
+	
+				$(".dropdown dd ul li a").click(function () {
+					var text = $(this).html();
+					$(".dropdown dt a span").html(text);
+					$(".dropdown dd ul").hide();
+					$("#result").html("Selected value is: " + getSelectedValue("sample"));
+				});
+	
+				function getSelectedValue(id) {
+					return $("#" + id).find("dt a span.value").html();
+				}
+	
+				$(document).bind('click', function (e) {
+					var $clicked = $(e.target);
+					if (!$clicked.parents().hasClass("dropdown"))
+						$(".dropdown dd ul").hide();
+				});
+	
+	
+				$("#flagSwitcher").click(function () {
+					$(".dropdown img.flag").toggleClass("flagvisibility");
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="header-left">
+							<div class="logo">
+								<a href="/"><img src="images/logo1.jpg" alt="" height="50px" width="50px"></a>
+							</div>
+							<div class="menu">
+								<a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+								<ul class="nav" id="nav">
+									<li><a href="/shop">product</a></li>
+									<li><a href="/team">About</a></li>
+									<li><a href="/contact">Contact</a></li>
+	
+									<div class="clear"></div>
+								</ul>
+	
+								<script type="text/javascript" src="js/responsive-nav.js"></script>
+							</div>
+						</div>
+						<div class="header-right">
+							<div class="menu">
+								<% if(authorized){ %>
+									<ul class="nav" id="nav">
+										<li><a href="/logout">Logout</a></li>
+									</ul>
+									<% }else{ %>
+										<ul class="nav" id="nav">
+											<li><a href="/login">Login</a></li>
+											<li><a href="/register">SignUP</a></li>
+										</ul>
+										<% } %>
+	
+							</div>
+						</div>
+					</div>
+					<h3 style="color: white; padding-left: 500px; padding-bottom: 20px;">THE BALLOONTIC ASYLUM</h3>
+				</div>
+	
+			</div>
+	
+		</div>
+		<div class="container">
+			<center>
+				<div class="btn-group">
+					<a href="/filter-category?category=birthday_bouquets"><button>Birthday Bouquets</button></a>
+					<a href="/filter-category?category=ballony_occasions"><button>Balloony Occasions</button></a>
+					<a href="/filter-category?category=build_ballon_bouquet"><button>Build a Balloon Bouquet</button></a>
+					<a href="/filter-category?category=decorating_with_ballons"><button>Decorating with Balloons</button></a>
+					<a href="/filter-category?category=ballon_in_bulk"> <button>Balloons in Bulk</button></a>
+				</div>
+			</center>
+		</div>
+	
+	<div class="main">
+		<div class="shop_top">
+			<div class="container">
+				<div class="col-md-6">
+					<div class="login-page">
+						<h4 class="title">New Customers</h4>
+						<p>Welcome to our website. If this is first time you encountered this website then please create your account for better experience.</p>
+						<div class="button1">
+							<a href="/register"><input type="submit" name="Submit" value="Create an Account"></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="login-title">
+						<h4 class="title">Registered Customers</h4>
+						<div id="loginbox" class="loginbox">
+							<% if(errors.length){ %>
+							<div class="alert alert-danger" role="alert">
+								<ul class="mb-0">
+									<% for(var i=0; i < errors.length ; i++) { %>
+									<li>
+										<%= errors[i].param%> - <%= errors[i].msg%> 
+									</li>
+									<% } %>
+								</ul>
+							</div>
+							<% } %>
+							<form method="POST" name="login" id="login-form">
+								<fieldset class="input">
+									<p id="login-form-username">
+										<label for="modlgn_username">Email</label>
+										<input id="modlgn_username" type="text" name="email" class="inputbox" size="18"
+											autocomplete="off">
+									</p>
+									<p id="login-form-password">
+										<label for="modlgn_passwd">Password</label>
+										<input id="modlgn_passwd" type="password" name="password" class="inputbox"
+											size="18" autocomplete="off">
+									</p>
+									<div class="remember">
+										<p id="login-form-remember">
+											<label for="modlgn_remember"><a href="#">Forget Your Password ? </a></label>
+										</p>
+										<input type="submit" name="Submit" class="button" value="Login">
+										<div class="clear"></div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<center>
+					<div>
+						<a href="/"><img src="images/logo.jpg" alt="" / height="50px" width="50px"></a>
+						COPY RIGHT KRISHNA RAJESH SARANG @2019-2021
+					</div>
+				</center>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>
